@@ -1,0 +1,19 @@
+name: Exercise 1 answer
+on: push
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Get Code  # To clone the code to this VM
+                uses: actions/checkout@v3
+            -   name: Install npm
+                uses: actions/setup-node@v3
+                with: 
+                    node-version: 18
+            -   name: install Dependencies
+                run:  npm ci
+            -   name: run lint
+                run:   npm test 
+                
+
+            
