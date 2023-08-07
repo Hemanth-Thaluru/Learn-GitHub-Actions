@@ -1,8 +1,0 @@
-name: starting action on push
-on: [push]
-jobs: 
-    action_name:
-        runs-on: ubuntu-latest
-        steps:
-            -   name: echoing on push
-                run: echo "Hello world after push"
